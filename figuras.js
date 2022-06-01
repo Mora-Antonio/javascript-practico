@@ -1,37 +1,24 @@
 //Codigo del cuadrado
-console.group('cuadrados')
-
 function perimetroCuadrado(lado){
     let resultado = lado * 4; 
     return resultado; 
 }
-
 function areaCuadrado(lado)
 {
-    return lado **2;
+    return lado ** 2;
 }
 
-console.groupEnd();
-
 //Codigo del triangulo
-console.group('triangulo');
-
 function perimetroTriangulo(lado1, lado2, base){
     return lado1 + lado2 + base;
 }
 
-console.log('El perímetro del triangulo es: ' + perimetroTriangulo + ' cm');
 function areaTriangulo(base, altura){
     return (base *  altura) / 2;
 }
 
-console.groupEnd();
-
 //Codigo del circulo
-console.group('circulo');
-
-
-function primetroCirculo (radio){
+function perimetroCirculo (radio){
     return Math.round((2 * Math.PI * radio) * 100) / 100;
 } 
 
@@ -39,4 +26,19 @@ function areaCirculo (radio) {
     return Math.round(((radio ** 2) * Math.PI) * 100) / 100;
 } 
 
-console.groupEnd();
+
+//Aqui interactuamos con el HTML
+function calcularPerimetroCuadrado(){
+    const inputCuadrado = document.getElementById('inputCuadrado');
+    const respuestaPerimetro = document.getElementById('respuestaPerimetro');
+    const value = parseFloat(inputCuadrado.value);
+    const perimetro = perimetroCuadrado(value);
+    respuestaPerimetro.innerHTML = 'El perimetro del cuadrado es: ' + perimetro;
+}
+function calcularAreaCuadrado(){
+    const inputCuadrado = document.getElementById('inputCuadrado');
+    const respuestaArea = document.getElementById('respuestaArea');
+    const value = parseFloat(inputCuadrado.value);
+    const area = areaCuadrado(value);
+    respuestaArea.innerHTML = 'El area del cuadrado es: ' + area;
+}
