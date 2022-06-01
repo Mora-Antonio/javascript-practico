@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+:root{
+    font-family: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    max-width: 950px;
+    min-width: 320px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100%;
+    max-width: 950px;
+    min-width: 320px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #2e3440;
+    border-radius: 12px;
+    background-color: #242933;
+    color: #e5e9f0;
+}
+section.geometric-figures{
+    display: flex;
+    justify-content: center;
+}
+section.geometric-figures > div{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.geometric-figures > div > figure{
+    width: 48px;
+    height: 48px;
+    background-color: #5e81ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 3px;
+}
+section.geometric-figures > div > figure > img{
+    width: 32px;
+    height: 32px;
+}
+
+section.operationsArea{
+    width: 100%;
+    display: flex;
+}
+div.informationInputTriangle{
+    width: 50%;
+    padding: 12px;
+    text-align: center;
+}
+
+div.informationInputTriangle > h2{
+    margin-bottom: 12px;
+}
+div.informationInputTriangle > p{
+    margin-bottom: 12px;
+}
+div.informationInputTriangle form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+div.informationInputTriangle div.dato{
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+}
+div.informationInputTriangle div.dato label{
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+div.informationInputTriangle div.dato  div.opcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 52px;
+    background-color: #3b4252;
+    border-radius: 8px;
+    margin: 0;
+    padding: 8px;
+}
+div.informationInputTriangle div.dato  div.opcion input{
+    width: 130px;
+    height: 30px;
+    background-color: transparent;
+    margin-right: 8px;
+    color: #d8dee9;
+    outline: none;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button{
+    background-color:#242933;
+}
+
+div.informationInputTriangle div.dato  div.opcion input::placeholder{
+    color: #d8dee9;
+}
+div.informationInputTriangle div.dato  div.opcion select{
+    width: 40px;
+    background-color: transparent;
+    color: #d8dee9;
+}
+div.informationInputTriangle button.calculate{
+    width: 400px;
+    height: 65px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    background-color: #242933;
+    font-weight: bold;
+    color: #d8dee9;
+    border: 2px solid #d8dee9;
+    cursor: pointer;
+    margin-top: 12px;
+}
+div.informationInputTriangle button.calculate:hover{
+    color: #88c0d0;
+    border: 2px solid #88c0d0; 
+}
+div.resultado{
+    width: 50%;
+    padding: 12px;
+}
