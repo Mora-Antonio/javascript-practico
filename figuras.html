@@ -5,23 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométricas 👾</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-        <h1>Figuras Geométricas</h1>
-        <p>Este el el primer taller del curs práctico de JavaScript</p>
+        <h1>Geometric Figure Calculator</h1>
+        <p>This is the first workshop of the JavaScript workshop</p>
     </header>
-    <section>
-        <h2>Calcula el área y perímetro de un cuadrado</h2>
-        <form action="">
-            <label for="cuadrado">Escribe cuanto mide cada lado de tu cuadrado: </label>
-            <input type="number" id="inputCuadrado">
-            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
-            <button type="button" onclick="calcularAreaCuadrado()">Calcular área</button>
-        </form>
-        <p type="text" id="respuestaPerimetro"></p>
-        <p type="text" id="respuestaArea"></p>
-    </section>
+    <main>
+        <section class="geometric-figures">
+            <div class="triangle">
+                <figure>
+                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/bleach.png" alt="Triangle">
+                </figure>
+                <span>Triangle</span>
+            </div>
+            <div class="circle">
+                <figure>
+                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/circle.png" alt="Circle">
+                </figure>
+                <span>Circle</span>
+            </div>
+            <div class="square">
+                <figure>
+                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/box.png" alt="Square">
+                </figure>
+                <span>Square</span>
+            </div>
+        </section>
+
+        <section class="operationsArea">
+            
+            <div class="informationInputTriangle">
+                <h2>Let's calculate the Area and Perimeter of a Triangle!</h2>
+                <p>Enter the measurements of the triangle and press the "calculate" button.</p>
+                <form>
+                    <div class="dato">
+                        <label for="heightTriangle">Height</label>
+                        <div class="opcion">
+                            <input type="number" id="heightTriangle" placeholder="Enter the height">
+                            <select id="unitMeasurement">
+                                <option value="cm" selected>cm</option>
+                                <option value="mm">mm</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dato">
+                        <label for="baseTriangle">Base</label>
+                        <div class="opcion">
+                            <input type="number" id="baseTriangle" placeholder="Enter the base">
+                            <select id="unitMeasurement">
+                                <option value="cm" selected>cm</option>
+                                <option value="mm">mm</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="dato">
+                        <label for="sideA">Side'A'</label>
+                        <div class="opcion">
+                            <input type="number" id="sideA" placeholder="Enter the side A">
+                            <select id="unitMeasurement">
+                                <option value="cm" selected>cm</option>
+                                <option value="mm">mm</option>
+                                <option value="in">in</option>
+                                <option value="m">m</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="dato">           
+                    <label for="sideB">Side'B'</label>
+                    <div class="opcion">
+                        <input type="number" id="sideB" placeholder="Enter the side B">
+                        <select id="unitMeasurement">
+                            <option value="cm" selected>cm</option>
+                            <option value="mm">mm</option>
+                            <option value="in">in</option>
+                            <option value="m">m</option>
+                        </select>
+                    </div>
+                    </div>
+                </form>                
+                <button type="button" class="calculate">Calculate</button>
+            </div>
+
+            <div class="resultado">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, architecto porro fugit eaque sed tempore provident dolor laudantium vero nostrum fugiat quibusdam accusamus expedita, cupiditate asperiores debitis doloremque id nisi!
+            </div>
+        </section>
+
+    </main>
     <script src="/figuras.js"></script>
 </body>
 </html>
