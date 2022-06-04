@@ -46,10 +46,11 @@ div.principal-container{
     width: 100%;
     min-width: 320px;
     max-width: 900px;
-    height: 600px;
+    min-height: 600px;
     border: 2px solid #4c566a;
     border-radius: 12px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 div.header-principal-container{
     width: 100%;
@@ -200,7 +201,6 @@ div.result div.resul-figure{
     height: 72px;
     background-color: #242933;
     border-radius: 8px;
-
     display: flex;
 }
 div.resul-figure div.button-reset{
@@ -266,4 +266,23 @@ div.form form.square{
     grid-template-rows: repeat(1, 70px);
     gap: 10px;
     margin-bottom: 30px;
+}
+@media(max-width: 600px)
+{
+    div.contents-principal-container section{
+        flex-direction: column;
+    }
+    div.contents-principal-container section > div{
+        width: 100%;
+    }
+    div.result{
+        margin-top: 0;
+    }
+    div.result div.resul-figure{
+        margin-bottom: 12px;
+    }
+    div.result > div:nth-child(1){
+        width: 250px;
+        height: 250px;
+    }
 }
