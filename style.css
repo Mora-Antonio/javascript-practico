@@ -1,146 +1,228 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
+    outline: none;
 }
 :root{
-    font-family: 62.5%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+    --color-text: #eceff4;
+    --principal-buttom: #88c0d0;
+    --principal-background: #242933; 
+    --borde-buttoms: #434c5e;
+    --second-background:#2e3440;
 }
+body{
+    background: rgb(46,52,64);
+    background: radial-gradient(circle, rgba(46,52,64,1) 0%, rgba(55,62,77,1) 50%, rgba(41,46,57,1) 100%); 
+}
+
+/*Header*/
 header{
     width: 100%;
-    max-width: 950px;
-    min-width: 320px;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    color: var(--color-text);
 }
+header h1.principal-title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 50px;
+}
+header p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Principal section */
 main{
     width: 100%;
-    max-width: 950px;
+}
+div.principal-container{
+    width: 100%;
     min-width: 320px;
-    height: 700px;
+    max-width: 900px;
+    height: 600px;
+    border: 2px solid #4c566a;
+    border-radius: 12px;
     margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border: solid 2px #2e3440;
-    border-radius: 12px;
-    background-color: #242933;
-    color: #e5e9f0;
 }
-section.geometric-figures{
+div.header-principal-container{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(46, 52, 64,80%);
+    border-radius: 12px 12px 0 0;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
-section.geometric-figures > div{
-    width: 70px;
-    height: 70px;
+div.header-principal-container div.figure{
+    width: 85px;
+    height: 85px;
+    margin: 0 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
-section.geometric-figures > div > figure{
-    width: 48px;
-    height: 48px;
+div.figure > div{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    padding: 4px;
+}
+div.figure div.triangle{
     background-color: #5e81ac;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    margin-bottom: 3px;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/bleach.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
 }
-section.geometric-figures > div > figure > img{
-    width: 32px;
-    height: 32px;
+div.figure div.circle{
+    background-color: #81a1c1;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/circle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+div.figure div.square{
+    background-color: #88c0d0;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/box.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+div.figure span{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text);
 }
 
-section.operationsArea{
+div.contents-principal-container{
+    height: 85%;
+    display: flex;
+}
+div.contents-principal-container > div{
+    width: 50%;
+    height: 100%;
+}
+div.info-figure-data-entry{
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 30px;
+}
+div.info-figure-data-entry h2{
+    color: var(--color-text);
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+div.info-figure-data-entry p{
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 12px;
+}
+div.form{
+    padding: 30px;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-div.informationInputTriangle{
-    width: 50%;
-    padding: 12px;
-    text-align: center;
-}
-
-div.informationInputTriangle > h2{
-    margin-bottom: 12px;
-}
-div.informationInputTriangle > p{
-    margin-bottom: 12px;
-}
-div.informationInputTriangle form{
+div.form form{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 70px);
+    gap: 10px;
+    margin-bottom: 30px;
 }
-div.informationInputTriangle div.dato{
+div.form form div.opcion{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-right: 8px;
-}
-div.informationInputTriangle div.dato label{
-    font-weight: bold;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-div.informationInputTriangle div.dato  div.opcion{
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 52px;
-    background-color: #3b4252;
-    border-radius: 8px;
-    margin: 0;
+}
+div.form label{
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+div.form input{
+    height: 40px;
+    font-size: 1.3rem;
     padding: 8px;
+    border-radius: 10px;
 }
-div.informationInputTriangle div.dato  div.opcion input{
-    width: 130px;
-    height: 30px;
-    background-color: transparent;
-    margin-right: 8px;
-    color: #d8dee9;
-    outline: none;
-}
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button{
-    background-color:#242933;
+div.form button.calculate{
+    width: 90%;
+    height: 80px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #242933;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
-div.informationInputTriangle div.dato  div.opcion input::placeholder{
-    color: #d8dee9;
+div.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-div.informationInputTriangle div.dato  div.opcion select{
-    width: 40px;
-    background-color: transparent;
-    color: #d8dee9;
+div.result div.figure-result{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/trianglel.svg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
 }
-div.informationInputTriangle button.calculate{
-    width: 400px;
-    height: 65px;
-    border-radius: 12px;
-    font-size: 1.1rem;
+div.result div.resul-figure{
+    width: 300px;
+    height: 72px;
     background-color: #242933;
-    font-weight: bold;
-    color: #d8dee9;
-    border: 2px solid #d8dee9;
+    border-radius: 8px;
+
+    display: flex;
+}
+div.resul-figure div.button-reset{
+    width: 72px;
+    height: 100%;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/form.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    margin-top: 12px;
 }
-div.informationInputTriangle button.calculate:hover{
-    color: #88c0d0;
-    border: 2px solid #88c0d0; 
+div.resul-figure div.button-reset img{
+    margin-left: 10px;
 }
-div.resultado{
-    width: 50%;
-    padding: 12px;
+div.resul-figure div.answers{
+    width: calc(100% - 72px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.resul-figure div.answers p{
+    font-size: 1.5rem;
+    color: var(--color-text);
+    font-weight: 500;
 }

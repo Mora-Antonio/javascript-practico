@@ -4,102 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figuras Geométricas 👾</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Figuras Geometricas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
-        <h1>Geometric Figure Calculator</h1>
-        <p>This is the first workshop of the JavaScript workshop</p>
+        <h1 class="principal-title">Geometric Figures</h1>
+        <p>This is the first workshop of the practical JavaScript course.</p>
     </header>
     <main>
-        <section class="geometric-figures">
-            <div class="triangle">
-                <figure>
-                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/bleach.png" alt="Triangle">
-                </figure>
-                <span>Triangle</span>
+        <div class="principal-container">
+            <div class="header-principal-container">
+                <div class="figure">
+                    <div class="triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="figure">
+                    <div class="circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="figure">
+                    <div class="square"></div>
+                    <span>Square</span>
+                </div>
             </div>
-            <div class="circle">
-                <figure>
-                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/circle.png" alt="Circle">
-                </figure>
-                <span>Circle</span>
-            </div>
-            <div class="square">
-                <figure>
-                    <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/box.png" alt="Square">
-                </figure>
-                <span>Square</span>
-            </div>
-        </section>
-
-        <section class="operationsArea">
-            
-            <div class="informationInputTriangle">
-                <h2>Let's calculate the Area and Perimeter of a Triangle!</h2>
-                <p>Enter the measurements of the triangle and press the "calculate" button.</p>
-                <form>
-                    <div class="dato">
-                        <label for="heightTriangle">Height</label>
-                        <div class="opcion">
-                            <input type="number" id="heightTriangle" placeholder="Enter the height">
-                            <select id="unitMeasurement">
-                                <option value="cm" selected>cm</option>
-                                <option value="mm">mm</option>
-                                <option value="in">in</option>
-                                <option value="m">m</option>
-                            </select>
+            <div class="contents-principal-container">
+                <div class="data-entry">
+                    <div class="info-figure-data-entry">
+                        <h2>Let's calculate the Area and Perimeter of a Triangle!</h2>
+                        <p>Enter the measurements of the triangle and press the "calculate" button.</p>
+                    </div>
+                    <div class="form">
+                        <form>
+                            <div class="opcion">
+                                <label for="height">Height</label>
+                                <input type="number" min="0" placeholder="Enter the height" id="height" required>
+                            </div>
+                            <div class="opcion">
+                                <label for="base">Base</label>
+                                <input type="number" min="0" placeholder="Enter base" id="base" required>
+                            </div>
+                            <div class="opcion">
+                                <label for="sideA">Side 'A'</label>
+                                <input type="number" min="0" placeholder="Enter the side 'A'" id="sideA" required>
+                            </div>
+                            <div class="opcion">
+                                <label for="sideB">Side 'B'</label>
+                                <input type="number" min="0" placeholder="Enter the side 'B'" id="sideB" required>
+                            </div>
+                        </form>
+                        <button type="button" class="calculate" onclick="triangleAnswers()">Calculate</button>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="figure-result"></div>
+                    <div class="resul-figure">
+                        <div class="button-reset">
+                            <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/undo.svg" alt="">
+                        </div>
+                        <div class="answers">
+                            <p>Area: <span id="answerArea"></span></p>
+                            <p>Perimeter:  <span id="answerPerimeter"></span> </p>
                         </div>
                     </div>
-                    <div class="dato">
-                        <label for="baseTriangle">Base</label>
-                        <div class="opcion">
-                            <input type="number" id="baseTriangle" placeholder="Enter the base">
-                            <select id="unitMeasurement">
-                                <option value="cm" selected>cm</option>
-                                <option value="mm">mm</option>
-                                <option value="in">in</option>
-                                <option value="m">m</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="dato">
-                        <label for="sideA">Side'A'</label>
-                        <div class="opcion">
-                            <input type="number" id="sideA" placeholder="Enter the side A">
-                            <select id="unitMeasurement">
-                                <option value="cm" selected>cm</option>
-                                <option value="mm">mm</option>
-                                <option value="in">in</option>
-                                <option value="m">m</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="dato">           
-                    <label for="sideB">Side'B'</label>
-                    <div class="opcion">
-                        <input type="number" id="sideB" placeholder="Enter the side B">
-                        <select id="unitMeasurement">
-                            <option value="cm" selected>cm</option>
-                            <option value="mm">mm</option>
-                            <option value="in">in</option>
-                            <option value="m">m</option>
-                        </select>
-                    </div>
-                    </div>
-                </form>                
-                <button type="button" class="calculate">Calculate</button>
+                </div>
             </div>
-
-            <div class="resultado">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, architecto porro fugit eaque sed tempore provident dolor laudantium vero nostrum fugiat quibusdam accusamus expedita, cupiditate asperiores debitis doloremque id nisi!
-            </div>
-        </section>
-
+        </div>
     </main>
+    <footer></footer>
     <script src="/figuras.js"></script>
 </body>
 </html>

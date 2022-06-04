@@ -25,20 +25,22 @@ function perimetroCirculo (radio){
 function areaCirculo (radio) {
     return Math.round(((radio ** 2) * Math.PI) * 100) / 100;
 } 
-
-
-//Aqui interactuamos con el HTML
-function calcularPerimetroCuadrado(){
-    const inputCuadrado = document.getElementById('inputCuadrado');
-    const respuestaPerimetro = document.getElementById('respuestaPerimetro');
-    const value = parseFloat(inputCuadrado.value);
-    const perimetro = perimetroCuadrado(value);
-    respuestaPerimetro.innerHTML = 'El perimetro del cuadrado es: ' + perimetro;
-}
-function calcularAreaCuadrado(){
-    const inputCuadrado = document.getElementById('inputCuadrado');
-    const respuestaArea = document.getElementById('respuestaArea');
-    const value = parseFloat(inputCuadrado.value);
-    const area = areaCuadrado(value);
-    respuestaArea.innerHTML = 'El area del cuadrado es: ' + area;
+//Iniciamos con los temas
+function triangleAnswers(){
+    let triangleHeight = document.getElementById('height');
+    let triangleBase = document.getElementById('base');
+    let triangleSideA = document.getElementById('sideA');
+    let triangleSideB = document.getElementById('sideB');
+    let perimetroAnswer = document.getElementById('answerPerimeter');
+    let areaAnswer = document.getElementById('answerArea');
+    // Valores de los input
+    let height = parseFloat(triangleHeight.value);
+    let base = parseFloat(triangleBase.value);
+    let sideA = parseFloat(triangleSideA.value);
+    let sideB = parseFloat(triangleSideB.value);
+    //Respuestas
+    let perimetro = perimetroTriangulo(base, sideA, sideB);
+    perimetroAnswer.innerHTML = perimetro;
+    let area = areaTriangulo(base, height);
+    areaAnswer.innerHTML = area;
 }
