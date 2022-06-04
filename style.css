@@ -35,7 +35,9 @@ header p{
     font-weight: 400;
     margin-bottom: 40px;
 }
-
+div.contents-principal-container section.circle, div.contents-principal-container section.square{
+    display: none ;
+}
 /* Principal section */
 main{
     width: 100%;
@@ -102,11 +104,11 @@ div.figure span{
     color: var(--color-text);
 }
 
-div.contents-principal-container{
+div.contents-principal-container > section{
     height: 85%;
     display: flex;
 }
-div.contents-principal-container > div{
+div.contents-principal-container > section > div{
     width: 50%;
     height: 100%;
 }
@@ -163,6 +165,7 @@ div.form input{
     font-size: 1.3rem;
     padding: 8px;
     border-radius: 10px;
+    width: 100%;
 }
 div.form button.calculate{
     width: 90%;
@@ -181,6 +184,7 @@ div.result{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 div.result div.figure-result{
     width: 300px;
@@ -225,4 +229,41 @@ div.resul-figure div.answers p{
     font-size: 1.5rem;
     color: var(--color-text);
     font-weight: 500;
+}
+/* Circle */
+div.result div.circle{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/oval.svg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+div.form form.circle{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 70px);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+/*Square*/
+div.result div.square{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/square.svg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+div.form form.square{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 70px);
+    gap: 10px;
+    margin-bottom: 30px;
 }

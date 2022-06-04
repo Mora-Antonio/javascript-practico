@@ -18,59 +18,121 @@
     <main>
         <div class="principal-container">
             <div class="header-principal-container">
-                <div class="figure">
+                <div class="figure" onclick="triangleWindows()">
                     <div class="triangle"></div>
                     <span>Triangle</span>
                 </div>
-                <div class="figure">
+                <div class="figure" onclick="circleWindows()">
                     <div class="circle"></div>
                     <span>Circle</span>
                 </div>
-                <div class="figure">
+                <div class="figure" onclick="squareWindows()">
                     <div class="square"></div>
                     <span>Square</span>
                 </div>
             </div>
             <div class="contents-principal-container">
-                <div class="data-entry">
-                    <div class="info-figure-data-entry">
-                        <h2>Let's calculate the Area and Perimeter of a Triangle!</h2>
-                        <p>Enter the measurements of the triangle and press the "calculate" button.</p>
-                    </div>
-                    <div class="form">
-                        <form>
-                            <div class="opcion">
-                                <label for="height">Height</label>
-                                <input type="number" min="0" placeholder="Enter the height" id="height" required>
-                            </div>
-                            <div class="opcion">
-                                <label for="base">Base</label>
-                                <input type="number" min="0" placeholder="Enter base" id="base" required>
-                            </div>
-                            <div class="opcion">
-                                <label for="sideA">Side 'A'</label>
-                                <input type="number" min="0" placeholder="Enter the side 'A'" id="sideA" required>
-                            </div>
-                            <div class="opcion">
-                                <label for="sideB">Side 'B'</label>
-                                <input type="number" min="0" placeholder="Enter the side 'B'" id="sideB" required>
-                            </div>
-                        </form>
-                        <button type="button" class="calculate" onclick="triangleAnswers()">Calculate</button>
-                    </div>
-                </div>
-                <div class="result">
-                    <div class="figure-result"></div>
-                    <div class="resul-figure">
-                        <div class="button-reset">
-                            <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/undo.svg" alt="">
+                <section class="triangle" id="triangleSection">
+                    <div class="data-entry">
+                        <div class="info-figure-data-entry">
+                            <h2>Let's calculate the Area and Perimeter of a Triangle!</h2>
+                            <p>Enter the measurements of the triangle and press the "calculate" button.</p>
                         </div>
-                        <div class="answers">
-                            <p>Area: <span id="answerArea"></span></p>
-                            <p>Perimeter:  <span id="answerPerimeter"></span> </p>
+                        <div class="form">
+                            <form>
+                                <div class="opcion">
+                                    <label for="height">Height</label>
+                                    <input type="number" min="0" placeholder="Enter the height" id="height" required>
+                                </div>
+                                <div class="opcion">
+                                    <label for="base">Base</label>
+                                    <input type="number" min="0" placeholder="Enter base" id="base" required>
+                                </div>
+                                <div class="opcion">
+                                    <label for="sideA">Side 'A'</label>
+                                    <input type="number" min="0" placeholder="Enter the side 'A'" id="sideA" required>
+                                </div>
+                                <div class="opcion">
+                                    <label for="sideB">Side 'B'</label>
+                                    <input type="number" min="0" placeholder="Enter the side 'B'" id="sideB" required>
+                                </div>
+                            </form>
+                            <button type="button" class="calculate" onclick="triangleAnswers()">Calculate</button>
                         </div>
                     </div>
-                </div>
+                    <div class="result">
+                        <div class="figure-result"></div>
+                        <div class="resul-figure">
+                            <div class="button-reset" onclick="delte()">
+                                <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/undo.svg" alt="">
+                            </div>
+                            <div class="answers">
+                                <p>Area: <span id="answerArea"></span></p>
+                                <p>Perimeter:  <span id="answerPerimeter"></span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="circle" id="circleSection">
+                    <div class="data-entry">
+                        <div class="info-figure-data-entry">
+                            <h2>Let's calculate the Area and Perimeter of a Circle!</h2>
+                            <p>Enter the measurements of the triangle and press the "calculate" button.</p>
+                        </div>
+                        <div class="form">
+                            <form class="circle">
+                                <div class="opcion">
+                                    <label for="radio">Radio</label>
+                                    <input type="number" min="0" placeholder="Enter the radio" id="radio" required>
+                                </div>
+                            </form>
+                            <button type="button" class="calculate" onclick="circleAnswers()">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="figure-result circle"></div>
+                        <div class="resul-figure">
+                            <div class="button-reset" onclick="delte()">
+                                <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/undo.svg" alt="">
+                            </div>
+                            <div class="answers">
+                                <p>Area: <span id="answerAreaCircle"></span></p>
+                                <p>Perimeter:  <span id="answerPerimeterCircle"></span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="square" id="squareSection">
+                    <div class="data-entry">
+                        <div class="info-figure-data-entry">
+                            <h2>Let's calculate the Area and Perimeter of a Square!</h2>
+                            <p>Enter the measurements of the triangle and press the "calculate" button.</p>
+                        </div>
+                        <div class="form">
+                            <form class="square">
+                                <div class="opcion">
+                                    <label for="sides">Sides</label>
+                                    <input type="number" min="0" placeholder="Enter the sides" id="sides" required>
+                                </div>
+                            </form>
+                            <button type="button" class="calculate" onclick="squareAnswers()">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="figure-result square"></div>
+                        <div class="resul-figure">
+                            <div class="button-reset" onclick="delte()">
+                                <img src="https://naderahmad.github.io/platzi-curso-practico-javascript/assets/images/undo.svg" alt="">
+                            </div>
+                            <div class="answers">
+                                <p>Area: <span id="answerAreaSquare"></span></p>
+                                <p>Perimeter:  <span id="answerPerimeterSquare"></span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
