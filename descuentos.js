@@ -25,3 +25,21 @@ function borrar(){
     descuento.value = '';
     respuesta.innerHTML = '';
 }
+
+// Pruebas
+function codigosDescuento(codigo,porcentaje){
+    this.codigo =  codigo;
+    this.porcentaje = porcentaje;
+}
+
+let condigosDescuentoVigentes = [
+    new codigosDescuento('Platzi', 0.15),
+    new codigosDescuento('VMX50', 0.23),
+    new codigosDescuento('MM89X', 0.60),
+    new codigosDescuento('S4VITAR', 0.03),
+    new codigosDescuento('NATE89', 0.05),
+];
+
+let valorDescontado = document.getElementById('descuento');
+let valorAnterior = document.getElementById('valorAnterior');
+let porcetajeDescuentoAplicado = document.getElementById('descuentoAplicado');
