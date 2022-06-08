@@ -7,7 +7,7 @@
     <title>Porcentajes y Descuentos</title>
     <link rel="stylesheet" href="/descuentos.css">
 </head>
-<body>
+<body onload="tipoDescuento()">
     <header>
         <h1>Porcentajes y Descuentos</h1>
         <p>
@@ -47,14 +47,14 @@
                 <h2>ASUS ROG Strix G15 Gaming Laptop</h2>
                 <p id="precioPorPagar">$ 2,299.00</p>
                 <p id="descuento"></p>
-                <p id="valorAnterior"> <span></span> <span id="descuentoAplicado"></span> </p>
-                <div class="cupones">
-                    <input type="text">
-                    <button type="button">Aplicar</button>
+                <p id="valorAnterior"> <span id="valorAnteriorTachado"></span> <span id="porcentajeAplicado"></span> </p>
+                <div class="cupones" id="ingresoCodigoDescuento">
+                    <input type="text" id="codigoIngresado">
+                    <button type="button" onclick="mostarValoresPorPagar()">Aplicar</button>
                 </div>
-                <select>
-                    <option value="cupon">Aplicar código de descuento</option>
-                    <option value="platzi" selected>Vengo de Platzi</option>
+                <select id="opcionesDescuento" onchange="tipoDescuento()">
+                    <option value="cupon" selected>Aplicar código de descuento</option>
+                    <option value="platzi" >Vengo de Platzi</option>
                 </select>
                 <button type="button" class="comprar">Comprar</button>
             </div>
