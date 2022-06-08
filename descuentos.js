@@ -58,7 +58,7 @@ let condigosDescuentoVigentes = [
     new codigosDescuento('platzi', 25.00),
     new codigosDescuento('VMX50', 23.00),
     new codigosDescuento('MM89X', 60.00),
-    new codigosDescuento('S4VITAR', 3.00),
+    new codigosDescuento('S4VITAR', 25.00),
     new codigosDescuento('NATE89', 5.00),
 ];
 
@@ -85,6 +85,7 @@ function buscadora(codigoBuscado)
 
 function tipoDescuento(){
     if(opcionesDescuento.value == 'cupon'){
+        porcetajeDescuentoAplicado.style.display = 'none';
         ingresoCodigoDescuento.style.display = 'flex';
         valorDescontado.innerHTML= '';
         precioPorPagarProducto.innerHTML = '$ ' + laptopAsus.precio + '.00';
@@ -137,3 +138,4 @@ function limpiar(){
     valorOriginal.innerHTML = '';
     porcetajeDescuentoAplicado.innerHTML = '';
 }
+
