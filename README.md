@@ -17,3 +17,9 @@ Aprende desarrollo web con JavaScript. Practica los fundamentos de la programaci
 - Implementar las fórmulas en JavaScript.
 - Crear funciones.
 - Integrar JavaScript en HTML.
+
+## Promedio, Mediana y Moda
+- Definir las fórmulas.
+- Implementar las fórmulas en JavaScript.
+- Crear funciones.
+- Integrar JavaScript en HTML.
