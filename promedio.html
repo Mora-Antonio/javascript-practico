@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promedio, Mediana y Moda</title>
+    <style>
+        input{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        <h1>Promedio</h1>
+        <label for="ingresoValores">Ingresa los numeros</label>
+        <input type='text' id="ingresoValores" placeholder="Ejemplo: 1,2,3,4,5">
+        <button type='buttum' id="aceptarBoton" onclick="calcularPromedio()">Aceptar</button>
+        <p> <span>El promedio de los valores ingresados es: </span> <span id="respuestaPromedio"></span></p>
+    </section>
+
+    <section>
+        <h1>Mediana</h1>
+        <label for="ingresoValoresMediana">Ingresa los numeros</label>
+        <input type='text' id="ingresoValoresMediana" placeholder="Ejemplo: 1,2,3,4,5">
+        <button type='buttum' id="aceptarBotonMediana" onclick="calcularMediana()">Aceptar</button>
+        <p> <span>La mediana de los valores ingresados es: </span> <span id="respuestaMediana"></span></p>
+    </section>
+  
+    <section>
+        <h1>Moda</h1>
+        <label for="ingresoValoresModa">Ingresa los numeros</label>
+        <input type='text' id="ingresoValoresModa" placeholder="Ejemplo: 1,2,3,4,5">
+        <button type='buttum' id="aceptarBotonModa" onclick="calcularModa()">Aceptar</button>
+        <p> <span>La moda de los valores ingresados es: </span> <span id="respuestaModa"></span></p>
+    </section>
+    <script src="/promedio.js"></script>
 </body>
 </html>
