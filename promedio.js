@@ -68,3 +68,65 @@ function calcularModa(){
     respueta.innerHTML = moda(lista)
    
 }
+
+// Media geométrica
+function mediaGeometrica(lista){
+    let producto = lista.reduce((a,b) => parseInt(a) * parseInt(b));
+    let resultado = Math.round((producto ** (1/lista.length))*100) /100;
+    return resultado;
+}
+
+let inputNumerosMediaGeometrica = document.getElementById('ingresoValoresMediaGeometrica');
+function calcularMediaGeometrica(){
+    let lista = inputNumerosMediaGeometrica.value.split(',');
+    let respueta = document.getElementById('respuestaMediaGeometrica');
+    respueta.innerHTML = mediaGeometrica(lista)
+}
+
+// Media armónica
+function mediaArmonica(lista){
+    let numerador = lista.length;
+    let denominador = 0;
+    for(var l = 0; l < lista.length; l++){
+        let division = (1/lista[l]);
+        denominador = denominador + division
+    }
+    let respuesta = Math.round((numerador / denominador) * 100) /100;
+    console.log(respuesta);
+    return respuesta
+}
+
+let inputNumerosMediaArmonica = document.getElementById('ingresoValoresMediaArmonica');
+function calcularMediaArmonica(){
+    let lista = inputNumerosMediaArmonica.value.split(',');
+    let respueta = document.getElementById('respuestaMediaArmonica');
+    respueta.innerHTML = mediaArmonica(lista)
+}
+//Promedio Ponderado
+const notes = [
+    {
+        course: "Educación Física",
+        note: 10,
+        credit: 2,
+    },
+    {
+        course: "Programación",
+        note: 8,
+        credit: 5,
+    },
+    {
+        course: "Finanzas personales",
+        note: 7,
+        credit: 5,
+    },
+];
+function promedioPonderado(lista)
+{
+    let numerador =  lista.map(elemento => elemento.note * elemento.credit).reduce((a,b) => a + b);
+    console.log(numerador);
+    let denominador = lista.map(elemento => elemento.credit).reduce((a,b) => a + b);
+    console.log(denominador);
+    let respuesta = Math.round((numerador / denominador)* 100) /100;
+    console.log('El promedio pondenderados es: ' + respuesta);
+}
+promedioPonderado(notes)

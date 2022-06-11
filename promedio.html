@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promedio, Mediana y Moda</title>
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         input{
             border: 1px solid black;
         }
@@ -35,6 +38,22 @@
         <button type='buttum' id="aceptarBotonModa" onclick="calcularModa()">Aceptar</button>
         <p> <span>La moda de los valores ingresados es: </span> <span id="respuestaModa"></span></p>
     </section>
+    <section>
+        <h1>Media Geométrica</h1>
+        <label for="ingresoValoresMediaGeometrica">Ingresa los numeros</label>
+        <input type='text' id="ingresoValoresMediaGeometrica" placeholder="Ejemplo: 1,2,3,4,5">
+        <button type='buttum' id="aceptarBotonMediaGeometrica" onclick="calcularMediaGeometrica()">Aceptar</button>
+        <p> <span>La media geométrica de los valores ingresados es: </span> <span id="respuestaMediaGeometrica"></span></p>
+    </section>
+
+    <section>
+        <h1>Media Armónica</h1>
+        <label for="ingresoValoresMediaArmonica">Ingresa los numeros</label>
+        <input type='text' id="ingresoValoresMediaArmonica" placeholder="Ejemplo: 1,2,3,4,5">
+        <button type='buttum' id="aceptarBotonMediaArmonica" onclick="calcularMediaArmonica()">Aceptar</button>
+        <p> <span>La media armónica de los valores ingresados es: </span> <span id="respuestaMediaArmonica"></span></p>
+    </section>
+
     <script src="/promedio.js"></script>
 </body>
 </html>
