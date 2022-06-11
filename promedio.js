@@ -123,9 +123,7 @@ const notes = [
 function promedioPonderado(lista)
 {
     let numerador =  lista.map(elemento => elemento.note * elemento.credit).reduce((a,b) => a + b);
-    console.log(numerador);
     let denominador = lista.map(elemento => elemento.credit).reduce((a,b) => a + b);
-    console.log(denominador);
     let respuesta = Math.round((numerador / denominador)* 100) /100;
     console.log('El promedio pondenderados es: ' + respuesta);
 }
