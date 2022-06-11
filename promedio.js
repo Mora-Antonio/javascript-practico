@@ -60,6 +60,7 @@ function moda(lista){
     moda = listaConteoArray[listaConteoArray.length - 1]
     return moda[0];
 }
+
 let inputNumerosModa = document.getElementById('ingresoValoresModa');
 function calcularModa(){
     let lista = inputNumerosModa.value.split(',');
