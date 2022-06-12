@@ -43,6 +43,6 @@ function mejoresPagados(lista,porcentaje)
     return listaTop10;
 };
 let listaMejoresPagagos = mejoresPagados(guatemala,10);
-let medianaMejoresPagados = medianaSalarios(listaMejoresPagagos.map(nombre => nombre.salario)) ;
+let medianaMejoresPagados = medianaSalarios(listaMejoresPagagos.map(nombre => nombre.salario));
 
 //Mejores pagados Clase 
