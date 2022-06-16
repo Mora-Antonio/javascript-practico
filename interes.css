@@ -7,13 +7,19 @@
 :root{
     font-size: 62.5%;
 }
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 section.contenedorInteresCompuestos{
     width: 500px;
     min-width: 320px;
     min-height: 400px;
     margin: 0 auto;
     padding: 12px;
-    margin: 20px;
     box-sizing: initial;
     background-color: #f0f0f0;
     border-radius: 12px;
@@ -225,4 +231,29 @@ select#periodoCapitalizable{
 input#respuetaMonto{
     font-size: 1.5rem;
     font-weight: 700;
+}
+@media(max-width: 570px){
+    section.contenedorInteresCompuestos{
+        width: 320px;
+    }
+    div.porcentajeSimbolo{
+        width: 60%;
+    }
+    select#tipoTasaInteres{
+        width: 39%;
+    }
+    div.pagosAdicionalesContainer > div{
+        width: 60%;
+        height: 100%;
+        display: flex;
+    }
+    div.pagosAdicionalesContainer select{
+        width: 39%;
+    }
+    div.periodoContainer input{
+        width: 65%;
+    }
+    div.periodoContainer select{
+        width: 34%;
+    }
 }
