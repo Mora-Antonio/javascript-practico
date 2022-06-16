@@ -69,7 +69,7 @@ function calculoMonto()
     let tiempo = tiempoAnnio(tiempoInversion.value, periodo.value);
     let capitalizacion = capitalizacionesPorAnnio(periodoCapitalizable.value, tiempo);
     let porcentaje = porcentajeCapitalizacion(tipoTasaInteres.value,tasaInteres.value, periodoCapitalizable.value);
-    let respueta = Math.round((parseFloat(inversionInicial.value) * ((1 + porcentaje) **capitalizacion))*100) /100;
+    let respueta = (parseFloat(inversionInicial.value) * ((1 + porcentaje) **capitalizacion));
     respuestaMonto.value= respueta;
 
 }
