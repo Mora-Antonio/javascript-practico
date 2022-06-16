@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body onload="selecionMoneda()">
     <h1>Calculadora de Interes Simple y Compuestos</h1>
     <section class="contenedorInteresCompuestos">
 
@@ -18,8 +18,8 @@
             <label for="tipoMoneda">Seleccione el tipo de moneda</label>
 
             <select name="tipoMonedaOpciones" id="tipoMoneda" onchange="selecionMoneda()">
-                <option value="$">Dólares ($)</option>
-                <option value="Q" selected>Quetzales (Q)</option>
+                <option value="$" selected>Dólares ($)</option>
+                <option value="Q">Quetzales (Q)</option>
             </select>
         </div>
 
@@ -41,9 +41,9 @@
                 </div>
                 <select id="tipoTasaInteres">
                     <option value="anual" selected>Anual</option>
-                    <option value="mensual" selected>Mensual</option>
-                    <option value="semestral" selected>Semestral</option>
-                    <option value="trimestral" selected>Trimestral</option>
+                    <option value="mensual" >Mensual</option>
+                    <option value="semestral" >Semestral</option>
+                    <option value="trimestral" >Trimestral</option>
                     <option value="cuatrimestre">Cuatrimestre</option>
                     <option value="bimensual">Bimensual</option>
                 </select>
@@ -59,10 +59,10 @@
                 </div>
                 <select id="plazoPagoAdicional">
                     <option value="anual" selected>Anual</option>
-                    <option value="mensual" selected>Mensual</option>
-                    <option value="diario" selected>Diario</option>
-                    <option value="semestral" selected>Semestral</option>
-                    <option value="trimestral" selected>Trimestral</option>
+                    <option value="mensual" >Mensual</option>
+                    <option value="diario" >Diario</option>
+                    <option value="semestral" >Semestral</option>
+                    <option value="trimestral" >Trimestral</option>
                     <option value="cuatrimestre">Cuatrimestre</option>
                     <option value="bimensual">Bimensual</option>
                 </select>
@@ -73,10 +73,10 @@
             <label for="periodoCapitalizable">Capitalización</label>
             <select id="periodoCapitalizable">
                 <option value="anual" selected>Anual</option>
-                <option value="mensual" selected>Mensual</option>
-                <option value="diario" selected>Diario</option>
-                <option value="semestral" selected>Semestral</option>
-                <option value="trimestral" selected>Trimestral</option>
+                <option value="mensual" >Mensual</option>
+                <option value="diario" >Diario</option>
+                <option value="semestral" >Semestral</option>
+                <option value="trimestral" >Trimestral</option>
                 <option value="cuatrimestre">Cuatrimestre</option>
                 <option value="bimensual">Bimensual</option>
             </select>
@@ -88,19 +88,19 @@
                 <input type="number" id="periodo" placeholder="Período">
                 <select id="tiempoInversion">
                     <option value="annio" selected>Años</option>
-                    <option value="mes" selected>Meses</option>
+                    <option value="mes" >Meses</option>
                 </select>
             </div>
         </div>
 
         <div class="botonesContenedor">
             <button type="button" id="calcularBoton" onclick="calculoMonto()">Calcular</button>
-            <button type="button" id="reiniciarBoton" >Reiniciar</button>
+            <button type="button" id="reiniciarBoton" onclick="limpiarDatos()" >Reiniciar</button>
         </div>
         <div class="respuestas">
             <label for="respuetaMonto">Total al final del periodo</label>
             <div class="inputBotonEliminar">
-                <span class="simboloMoneda" id="simboloMoneda">Q </span>
+                <span class="simboloMoneda" id="simboloMonedaRespuesta">Q </span>
                 <input type="text" id="respuetaMonto">
             </div>
         </div>
